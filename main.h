@@ -1,3 +1,6 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 #include <stdlib.h>
 #include <stdarg.h>
 
@@ -10,9 +13,9 @@
  */
 typedef struct flags
 {
-	int plus;
-	int space;
-	int hash;
+    int plus;
+    int space;
+    int hash;
 } flags_t;
 
 /**
@@ -23,8 +26,8 @@ typedef struct flags
  */
 typedef struct printHandler
 {
-	char c;
-	int (*f)(va_list ap, flags_t *f);
+    char c;
+    int (*f)(va_list ap, flags_t *f);
 } ph;
 
 /* print_nums */
@@ -69,3 +72,6 @@ int print_address(va_list l, flags_t *f);
 
 /* print_percent */
 int print_percent(va_list l, flags_t *f);
+
+
+#endif
